@@ -6,9 +6,11 @@ import {
   Link,
   NavLink,
 } from "react-router-dom";
-import Home from "./components/Home"
-import AboutUs from "./components/AboutUs"
+import Home from "./components/Home";
+import AboutUs from "./components/AboutUs";
 import ContactUs from "./components/ContactUs";
+import Login from "./components/Login";
+import Dashboard from "./components/Dashboard";
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
             <li>
               <Link to="/contact">Contact Us</Link>
             </li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
           </ul>
         </nav>
 
@@ -32,6 +37,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </div>
